@@ -1,0 +1,16 @@
+  <table class="table table-striped table-bordered table-condensed table-hover">
+    <thead>
+      <tr>
+        <td>Nome</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+  <% @esportes.each do |esporte| %>
+  <tr>
+    <td><%= esporte.nome_esporte  %></td>
+    <td><%= link_to "Show", esporte %></td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>

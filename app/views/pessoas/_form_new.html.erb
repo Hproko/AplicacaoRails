@@ -1,0 +1,49 @@
+<%= form_with(model: pessoa) do |form| %>
+  <% if pessoa.errors.any? %>
+    <div style="color: red">
+      <ul>
+        <% pessoa.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %> <br>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div> <br>
+
+  <div>
+    <%= form.label :sobrenome, style: "display: block" %>
+    <%= form.text_field :sobrenome %>
+  </div> <br>
+
+    <div>
+    <%= form.label "RG com digito verificador", style: "display: block" %>
+    <%= form.text_field :rg %>
+  </div> <br>
+
+  <div>
+    <%= form.label  "CPF com digito verificador", style: "display: block" %>
+    <%= form.text_field :cpf %>
+  </div> <br>
+
+  <div>
+    <%= form.label "Sigla do estado de origem", style: "display: block" %>
+    <%= form.select :sigla, options_for_select(Estado.pluck(:sigla))%>
+
+    <br><br>
+    <h3>Esportes praticados</h3>
+    <div style="display:flex; flex-direction:column;">
+      <%= collection_check_boxes :pessoa, :esporte_ids, Esporte.all, :id, :nome_esporte do |b|%>
+      <%= b.label class:"label-checkbox" do%>
+      <%= b.check_box + b.text%>
+      <%end%>
+      <%end%>
+    </div>
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+  <table class="table table-striped table-bordered table-condensed table-hover">
+    <thead>
+      <tr>
+        <td>Nome</td>
+        <td>Sigla</td>
+      </tr>
+    </thead>
+    <tbody>
+  <% @estados.each do |estado| %>
+  <tr>
+    <td><%= estado.nome  %></td>
+    <td><%= estado.sigla%></td>
+    <td><%= link_to "Show", estado%></td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>

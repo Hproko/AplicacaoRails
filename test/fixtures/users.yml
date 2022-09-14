@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+admin:
+  username: admin
+  password: root
+  user_type: A
+
+two:
+  username: MyString
+  password: MyString
+  user_type: MyString

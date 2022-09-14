@@ -1,0 +1,20 @@
+
+<div style="text-align:center;">
+<p style="color: red"><%= notice %></p>
+
+<%= render @esporte %>
+<b>Pessoas matriculadas:</b>
+<ul>
+  <% @pessoas.each do |pessoa| %>
+  <li><%= pessoa.nome%>  <%=pessoa.sobrenome%></li>
+  <% end %>
+<ul>
+<div>
+<br>
+  <div style="display:flex; flex-direction:row;justify-content:center;" >
+  <%= button_to "Edit this esporte", edit_esporte_path(@esporte), method: :get, :class => "btn btn-secondary" %>
+  <%= button_to "Destroy this esporte", @esporte, method: :delete, :class => "btn btn-danger" %>
+  </div>
+</div>
+
+</div>

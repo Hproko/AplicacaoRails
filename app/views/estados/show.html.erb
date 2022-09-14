@@ -1,0 +1,11 @@
+
+
+<div style="text-align:center;">
+<p style="color: red"><%= notice %></p>
+<%= render @estado %>
+
+  <div style="display:flex; flex-direction:row;justify-content:center;" >
+  <%= button_to "Edit this estado", edit_estado_path(@estado), method: :get, :class => "btn btn-secondary" %>
+  <%= button_to "Destroy this estado", @estado, method: :delete, :class => "btn btn-danger" %>
+  </div>
+</div>

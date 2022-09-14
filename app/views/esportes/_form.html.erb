@@ -1,0 +1,22 @@
+<%= form_with(model: esporte) do |form| %>
+  <% if esporte.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(esporte.errors.count, "error") %> prohibited this esporte from being saved:</h2>
+
+      <ul>
+        <% esporte.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome_esporte, style: "display: block" %>
+    <%= form.text_field :nome_esporte %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

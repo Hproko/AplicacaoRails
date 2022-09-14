@@ -1,0 +1,34 @@
+
+
+
+<div style="text-align:justify">
+
+    <h1 class="text-center">Readme</h1>
+    <div class="myText">
+    <p class="text">Os botões acima levam as páginas para consulta e manipulação das tabelas</p>
+    <p class="text">
+                            Para testar o funcionamento das tabelas: entre na página de alguma tabela e 
+                            clique sobre o botao new, se o usuario tiver permissao de administrador (login: admin / senha: root) ele
+                            poderá criar uma nova linha na tabela. Para deletar ou editar um célula, 
+                            clique sobre o link "Show" no fim de alguma linha da tabela.</p>     
+
+    <p class = "text">As Relações da tabela são :</p>
+    <p class = "text" style="margin-top:0px">1:1 Pessoa x Documento</p>
+    <p class = "text" style="margin-top:0px">N:1 Pessoa x Estado</p>
+    <p class = "text" style="margin-top:0px">N:N Pessoa x Esporte</p>
+
+    <p class = "text">Para verificar as relações entre na tabela de pessoas, clique sobre o link "show" de qualquer pessoa e veja que uma pessoa tem
+                      exatamente um cpf, um rg e um estado (relações 1:1 e 1:N), para verificar as relações N:N podemos ver quais esportes 
+                      essa pessoa pratica e na tabela de esportes ao clicar sobre o link "show" de qualquer esporte será possível ver quais pessoas praticam aquele 
+                      esporte.</p>
+
+    <p class = "text">É possível criar esportes e estados isoladamente, porém pessoas e documentos devem ser criados juntos.</p>
+
+    <p class="text">Como a aplicação é do tipo usuário/admin, os testes do rails não funcionavam corretamente, já que um usuário comum
+                    não tem permissão para inserir, alterar ou excluir elementos das tabelas. Portanto, para que os erros parassem de 
+                    surgir foi criado um método dentro de test_helper.rb que faz o login no sistema como administrador, esse método é
+                    chamado por cada classe de teste no seu setup.</p>
+
+
+    </div>
+</div>

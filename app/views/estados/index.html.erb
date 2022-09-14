@@ -1,0 +1,10 @@
+<p style="color: red; text-align:center"><%= notice %></p>
+
+<h1 class="text-center">Estados</h1>
+
+<%= button_to "New estado", new_estado_path, :method => "get", :class => "btn btn-success" %>
+
+<div id="estados">
+<%= render 'table'%>
+</div>
+
